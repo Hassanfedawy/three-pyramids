@@ -1,0 +1,141 @@
+{
+  "landing": {
+    "title": "Three Pyramids Construction Materials & Transport",
+    "subtitle": "Comprehensive Construction Solutions",
+    "description": "Providing high-quality construction materials, transportation services, and specialized heavy-duty equipment for your project needs.",
+    "cta": "Get a Quote"
+  },  
+  "about": {
+    "heroTitle": "Three Pyramids: Engineering Excellence",
+    "heroSubtitle": "Leaders in Heavy Equipment and Transportation Solutions",
+    "heroDescription": "A pioneering company providing specialized heavy equipment and transportation services for critical infrastructure projects.",
+    "missionTitle": "Our Mission",
+    "missionStatement": "Delivering innovative, reliable, and efficient solutions in heavy equipment operations and transportation services for industrial and major infrastructure projects.",
+    "values": {
+      "innovation": {
+        "title": "Innovation",
+        "description": "Continuous development of our technological capabilities and service offerings."
+      },
+      "quality": {
+        "title": "Quality",
+        "description": "Maintaining the highest standards of equipment performance and safety."
+      },
+      "sustainability": {
+        "title": "Sustainability",
+        "description": "Committed to environmentally responsible practices in all our operations."
+      }
+    },
+    "milestonesTitle": "Our Journey",
+    "companyDescription": "Specialists in heavy equipment operations, directional drilling, and transportation services for major global companies in infrastructure, energy, and utility sectors.",
+    "milestones": [
+      {
+        "year": "2010",
+        "event": "Founding and Launch",
+        "description": "Established the company with the goal of providing specialized heavy equipment and transportation services for major projects"
+      },
+      {
+        "year": "2015",
+        "event": "Equipment Expansion",
+        "description": "Expanded heavy equipment fleet and added advanced machinery to meet complex project requirements"
+      },
+      {
+        "year": "2018",
+        "event": "Technological Integration",
+        "description": "Integrated latest technologies into operations and maintenance to improve efficiency and performance"
+      },
+      {
+        "year": "2022",
+        "event": "Sustainable Practices",
+        "description": "Committed to adopting sustainable and environmentally friendly practices across all operations"
+      }
+    ]
+  },
+  "services": {
+    "title": "Three Pyramids Services",
+    "subtitle": "Comprehensive Construction and Transportation Solutions",
+    "closingDescription": "Three Pyramids is committed to providing comprehensive, high-quality solutions that meet and exceed your construction and transportation requirements.",
+    "mainTitle": "Three Pyramids Services",
+    "mainDescription": "Specialized in Heavy Equipment Operations and Transportation Services for Major Projects",
+    "keyServices": "Details",
+    "serviceScope": "Service Scope",
+    "servicesList": [
+      {
+        "title": "Heavy Equipment Operations",
+        "description": "Comprehensive heavy equipment services including excavators, loaders, and dump trucks for water, gas, sewage, and agricultural line extensions",
+        "details": [
+          "Excavators and Loaders",
+          "Dump Trucks",
+          "Water and Gas Line Extensions",
+          "Sewage and Agricultural Works"
+        ],
+        "fullDescription": "We provide comprehensive heavy equipment services with the highest quality and efficiency standards. Our scope of work includes using the latest equipment and technologies across various engineering and infrastructure projects. We possess a fully integrated fleet of specialized heavy equipment for excavation and leveling, infrastructure network extension, work in agricultural and industrial projects, and handling various terrains with high efficiency"
+      },
+      {
+        "title": "Transportation and Vehicle Services",
+        "description": "Supply of various vehicle types for transporting employees and engineers of global companies, and waste transportation vehicles for gas and oil companies",
+        "details": [
+          "Transportation of Global Company Employees",
+          "Transportation of Engineers from General Electric and Novabeni",
+          "Waste Transportation Vehicles for Gas and Oil Companies",
+          "Employee Transportation for LNG Gas Companies"
+        ],
+        "fullDescription": "We provide comprehensive and specialized transportation solutions for major global companies. Our expertise spans over a decade in providing distinguished transportation services for energy and industrial sectors. We offer diverse services including employee and engineer transportation, specialized vehicle provision for global companies, integrated vehicle fleet management, and specialized transportation services for gas and oil companies"
+      }
+    ],
+    "additionalServicesTitle": "Additional Services",
+    "additionalServicesDescription": "Comprehensive solutions that meet all your project needs",
+    "additionalServices": [
+      {
+        "title": "Maintenance and Technical Support",
+        "description": "Comprehensive maintenance services for heavy equipment and vehicles with a specialized technical team"
+      },
+      {
+        "title": "Engineering Consultations",
+        "description": "Providing specialized consultations in heavy equipment and project management"
+      },
+      {
+        "title": "Training and Qualification",
+        "description": "Specialized training programs for operating and maintaining heavy equipment"
+      }
+    ],
+    "clientTestimonialsTitle": "Our Clients' Testimonials",
+    "clientTestimonialsDescription": "We take pride in the trust of major global companies in our services",
+    "clientTestimonials": [
+      {
+        "name": "General Electric",
+        "quote": "A trusted and distinguished partner in executing complex engineering projects"
+      },
+      {
+        "name": "Novabeni",
+        "quote": "Transportation and heavy equipment services that always exceed our expectations"
+      },
+      {
+        "name": "LNG Gas Company",
+        "quote": "Precision and commitment are the hallmarks of Three Pyramids"
+      }
+    ],
+    "callToActionTitle": "Ready to Start Your Project?",
+    "callToActionDescription": "Contact us today to discuss your project needs and how Three Pyramids can be your ideal partner",
+    "callToActionButton": "Book Your Consultation Now"
+  },
+  "contact": {
+    "title": "Contact Three Pyramids",
+    "address": "123 Industrial Zone, Cairo, Egypt",
+    "phones": [
+      "+20 (02) 1234 5678",
+      "+20 (010) 9876 5432"
+    ],
+    "emails": [
+      "info@threepyramids.com",
+      "sales@threepyramids.com"
+    ],
+    "workHours": "Saturday - Thursday: 8:00 AM - 5:00 PM"
+  },
+  "navbar": {
+    "brand": "Three Pyramids",
+    "home": "Home",
+    "about": "About Us",
+    "services": "Services",
+    "contact": "Contact"
+  }
+}
