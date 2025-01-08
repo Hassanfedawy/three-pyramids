@@ -37,9 +37,9 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="bg-white shadow-pyramid-soft">
+    <nav className="bg-white shadow-pyramid-soft sticky top-0 z-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
+        <div className="flex justify-between items-center py-4 lg:py-5">
           {/* Logo and Brand */}
           <Link href="/" className="flex items-center space-x-3">
             <img 
@@ -53,10 +53,10 @@ export default function Navbar() {
           <div className="md:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-pyramid-500 hover:text-pyramid-300 focus:outline-none"
+              className="text-pyramid-500 hover:text-pyramid-300 focus:outline-none transition-colors"
             >
               <svg
-                className="w-6 h-6"
+                className="w-7 h-7"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -73,15 +73,20 @@ export default function Navbar() {
           </div>
 
           {/* Navigation Links (Desktop) */}
-          <div className="hidden md:flex space-x-6">
+          <div className="hidden md:flex space-x-6 lg:space-x-8">
             {navItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
                 className="text-pyramid-500 hover:text-pyramid-300 
-                           transition-colors font-medium"
+                           transition-colors font-medium font-roboto
+                           text-base lg:text-lg tracking-wide
+                           relative group"
               >
                 {item.label}
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-pyramid-300 
+                                 transition-all duration-300 
+                                 group-hover:w-full"></span>
               </Link>
             ))}
           </div>
@@ -91,71 +96,69 @@ export default function Navbar() {
             <div className="flex items-center bg-pyramid-100 rounded-full p-1">
               <button 
                 onClick={() => changeLanguage('en')}
-                className={`px-3 py-1 rounded-full ${
-                  i18n.language === 'en' 
+                className={`px-3 py-1 rounded-full font-roboto font-medium text-sm
+                  ${i18n.language === 'en' 
                     ? 'bg-pyramid-300 text-white' 
                     : 'text-pyramid-600 hover:bg-pyramid-200'
-                }`}
+                  }`}
               >
                 EN
               </button>
               <button 
                 onClick={() => changeLanguage('ar')}
-                className={`px-3 py-1 rounded-full ${
-                  i18n.language === 'ar' 
+                className={`px-3 py-1 rounded-full font-cairo font-medium text-sm
+                  ${i18n.language === 'ar' 
                     ? 'bg-pyramid-300 text-white' 
                     : 'text-pyramid-600 hover:bg-pyramid-200'
-                }`}
+                  }`}
               >
                 AR
               </button>
             </div>
           </div>
-        </div>
 
-        {/* Mobile Menu (Dropdown) */}
-        {isMobileMenuOpen && (
-          <div className="md:hidden">
-            <div className="flex flex-col space-y-4 mt-4">
-              {navItems.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className="text-pyramid-500 hover:text-pyramid-300 
-                             transition-colors font-medium"
-                >
-                  {item.label}
-                </Link>
-              ))}
-            </div>
-
-            {/* Language Switcher (Mobile) */}
-            <div className="mt-4">
-              <div className="flex items-center bg-pyramid-100 rounded-full p-1 w-fit">
-                <button 
-                  onClick={() => changeLanguage('en')}
-                  className={`px-3 py-1 rounded-full ${
-                    i18n.language === 'en' 
-                      ? 'bg-pyramid-300 text-white' 
-                      : 'text-pyramid-600 hover:bg-pyramid-200'
-                  }`}
-                >
-                  EN
-                </button>
-                <button 
-                  onClick={() => changeLanguage('ar')}
-                  className={`px-3 py-1 rounded-full ${
-                    i18n.language === 'ar' 
-                      ? 'bg-pyramid-300 text-white' 
-                      : 'text-pyramid-600 hover:bg-pyramid-200'
-                  }`}
-                >
-                  AR
-                </button>
+          {/* Mobile Menu (Dropdown) */}
+          {isMobileMenuOpen && (
+            <div className="absolute top-full left-0 w-full bg-white shadow-pyramid-soft md:hidden">
+              <div className="px-4 pt-2 pb-4 space-y-2">
+                {navItems.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className="block py-2 text-pyramid-500 hover:text-pyramid-300 
+                               transition-colors font-medium font-roboto
+                               text-base tracking-wide"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+                <div className="flex justify-center space-x-4 pt-4">
+                  <button 
+                    onClick={() => changeLanguage('en')}
+                    className={`px-3 py-1 rounded-full font-roboto font-medium text-sm
+                      ${i18n.language === 'en' 
+                        ? 'bg-pyramid-300 text-white' 
+                        : 'text-pyramid-600 hover:bg-pyramid-200'
+                      }`}
+                  >
+                    English
+                  </button>
+                  <button 
+                    onClick={() => changeLanguage('ar')}
+                    className={`px-3 py-1 rounded-full font-cairo font-medium text-sm
+                      ${i18n.language === 'ar' 
+                        ? 'bg-pyramid-300 text-white' 
+                        : 'text-pyramid-600 hover:bg-pyramid-200'
+                      }`}
+                  >
+                    العربية
+                  </button>
+                </div>
               </div>
             </div>
-          </div>
-        )}
+          )}
+        </div>
       </div>
     </nav>
   );

@@ -134,8 +134,8 @@
   "navbar": {
     "brand": "Three Pyramids",
     "home": "Home",
-    "about": "About Us",
-    "services": "Services",
+    "about": "About",
+    "services": "Services", 
     "contact": "Contact"
   }
 }

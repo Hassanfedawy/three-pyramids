@@ -52,8 +52,30 @@ module.exports = {
       },
       transitionProperty: {
         'pyramid': 'background-color, color, transform, box-shadow',
-      }
+      },
+      textAlign: {
+        'start': 'start',
+        'end': 'end',
+      },
+      flexDirection: {
+        'row-reverse': 'row-reverse',
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    function({ addUtilities }) {
+      const newUtilities = {
+        '.transition-dir': {
+          transition: 'all 0.3s ease-in-out',
+        },
+        '.dir-rtl': {
+          direction: 'rtl',
+        },
+        '.dir-ltr': {
+          direction: 'ltr',
+        }
+      }
+      addUtilities(newUtilities)
+    }
+  ],
 }

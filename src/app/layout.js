@@ -1,6 +1,7 @@
 "use client"
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { I18nextProvider } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 import { Roboto } from 'next/font/google';
 import localFont from 'next/font/local';
 import i18n from '../../i18n';
@@ -38,21 +39,39 @@ const cairo = localFont({
 });
 
 export default function RootLayout({ children }) {
-  useEffect(() => {
-    // Initialize i18n and set initial language
-    const savedLanguage = localStorage.getItem('language') || 'en';
-    i18n.changeLanguage(savedLanguage);
-    
-    // Set initial document direction and language
-    document.documentElement.dir = savedLanguage === 'ar' ? 'rtl' : 'ltr';
-    document.documentElement.lang = savedLanguage;
-  }, []);
+  const [language, setLanguage] = useState(i18n.language);
+  const { i18n: i18nInstance } = useTranslation();
 
- 
+  useEffect(() => {
+    const handleLanguageChange = (lng) => {
+      setLanguage(lng);
+      document.documentElement.lang = lng;
+      document.documentElement.dir = lng === 'ar' ? 'rtl' : 'ltr';
+      document.body.classList.toggle('dir-rtl', lng === 'ar');
+      document.body.classList.toggle('dir-ltr', lng === 'en');
+      document.body.style.fontFamily = lng === 'ar' 
+        ? 'var(--font-cairo), sans-serif' 
+        : 'var(--font-roboto), sans-serif';
+    };
+
+    i18nInstance.on('languageChanged', handleLanguageChange);
+    handleLanguageChange(i18nInstance.language);
+
+    return () => {
+      i18nInstance.off('languageChanged', handleLanguageChange);
+    };
+  }, [i18nInstance]);
+
   return (
     <html 
-      lang="en" 
-      className={`${roboto.variable} ${cairo.variable}`}
+      lang={language} 
+      dir={language === 'ar' ? 'rtl' : 'ltr'}
+      className={`
+        ${language === 'ar' ? 'dir-rtl' : 'dir-ltr'} 
+        transition-dir 
+        ${cairo.variable} 
+        ${roboto.variable}
+      `}
     >
       <head>
         <link 
@@ -62,13 +81,15 @@ export default function RootLayout({ children }) {
       </head>
       <body 
         className={`
-          ${i18n.language === 'en' ? 'font-roboto' : 'font-cairo'}
+          ${language === 'ar' ? 'dir-rtl' : 'dir-ltr'} 
+          transition-dir 
+          ${language === 'ar' ? cairo.className : roboto.className}
           bg-pyramid-50 text-pyramid-900
         `}
       >
         <I18nextProvider i18n={i18n}>
           <div 
-            dir={i18n.language === 'ar' ? 'rtl' : 'ltr'}
+            dir={language === 'ar' ? 'rtl' : 'ltr'}
             className="min-h-screen flex flex-col"
           >
             <Navbar />
