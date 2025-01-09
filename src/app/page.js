@@ -16,19 +16,19 @@ export default function Home() {
       icon: FaTruck,
       title: t('landing.serviceHighlights.0.title'),
       description: t('landing.serviceHighlights.0.description'),
-      image: '/images/na2l.jpg'
+      image: '/Images/na2l.jpg'
     },
     {
       icon: FaHardHat,
       title: t('landing.serviceHighlights.1.title'),
       description: t('landing.serviceHighlights.1.description'),
-      image: '/images/Construction Site.jpeg'
+      image: '/Images/Construction-Site.jpeg'
     },
     {
       icon: FaTools,
       title: t('landing.serviceHighlights.2.title'),
       description: t('landing.serviceHighlights.2.description'),
-      image: '/images/Hafar.jpg'
+      image: '/Images/Hafar.jpg'
     }
   ];
 
@@ -73,19 +73,19 @@ export default function Home() {
       icon: FaTruck,
       title: t('landing.services.0.title'),
       description: t('landing.services.0.description'),
-      image: '/images/na2l.jpg'
+      image: '/Images/na2l.jpg'
     },
     {
       icon: FaHardHat,
       title: t('landing.services.1.title'),
       description: t('landing.services.1.description'),
-      image: '/images/Construction Site.jpeg'
+      image: '/Images/Construction-Site.jpeg'
     },
     {
       icon: FaTools,
       title: t('landing.services.2.title'),
       description: t('landing.services.2.description'),
-      image: '/images/Hafar.jpg'
+      image: '/Images/Hafar.jpg'
     },
   ];
 
