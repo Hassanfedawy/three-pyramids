@@ -60,6 +60,30 @@ module.exports = {
       flexDirection: {
         'row-reverse': 'row-reverse',
       },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        slideUp: {
+          '0%': { 
+            opacity: '0', 
+            transform: 'translateY(20px)' 
+          },
+          '100%': { 
+            opacity: '1', 
+            transform: 'translateY(0)' 
+          },
+        },
+      },
+      animation: {
+        fadeIn: 'fadeIn 0.7s ease-out',
+        slideUp: 'slideUp 0.7s ease-out',
+        'slideUp-delay-300': 'slideUp 0.7s ease-out 0.3s',
+        'slideUp-delay-500': 'slideUp 0.7s ease-out 0.5s',
+        'slideUp-delay-700': 'slideUp 0.7s ease-out 0.7s',
+        'slideUp-delay-900': 'slideUp 0.7s ease-out 0.9s',
+      }
     },
   },
   plugins: [

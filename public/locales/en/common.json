@@ -3,7 +3,21 @@
     "title": "Three Pyramids Construction Materials & Transport",
     "subtitle": "Comprehensive Construction Solutions",
     "description": "Providing high-quality construction materials, transportation services, and specialized heavy-duty equipment for your project needs.",
-    "cta": "Get a Quote"
+    "cta": "Get a Quote",
+    "serviceHighlights": [
+      {
+        "title": "Transportation Solutions",
+        "description": "Efficient and reliable transportation of construction materials and heavy equipment across diverse terrains."
+      },
+      {
+        "title": "Construction Support",
+        "description": "Professional construction support with state-of-the-art machinery and skilled workforce."
+      },
+      {
+        "title": "Equipment Rental",
+        "description": "Wide range of high-quality construction and transport equipment available for rent."
+      }
+    ]
   },  
   "about": {
     "heroTitle": "Three Pyramids: Engineering Excellence",
@@ -80,6 +94,31 @@
           "Employee Transportation for LNG Gas Companies"
         ],
         "fullDescription": "We provide comprehensive and specialized transportation solutions for major global companies. Our expertise spans over a decade in providing distinguished transportation services for energy and industrial sectors. We offer diverse services including employee and engineer transportation, specialized vehicle provision for global companies, integrated vehicle fleet management, and specialized transportation services for gas and oil companies"
+      },
+      {
+        "title": "Specialized Vehicle Fleet Management",
+        "description": "Comprehensive fleet management and vehicle services for diverse industrial and infrastructure projects",
+        "details": [
+          "Advanced Fleet Tracking Systems",
+          "Customized Transportation Solutions",
+          "Efficient Route Optimization",
+          "Reliable and Timely Service Delivery"
+        ],
+        "fullDescription": "We provide comprehensive transportation services tailored to meet the unique requirements of our clients, ensuring smooth and efficient mobility solutions across various sectors and project types"
+      }
+    ],
+    "equipmentAndFleet": [
+      {
+        "name": "Heavy Excavators",
+        "description": "Advanced excavation machinery for complex construction projects"
+      },
+      {
+        "name": "Transport Vehicles",
+        "description": "Diverse fleet for efficient transportation and logistics"
+      },
+      {
+        "name": "Specialized Trucks",
+        "description": "Customized trucks for specialized industrial needs"
       }
     ],
     "additionalServicesTitle": "Additional Services",
@@ -126,8 +165,8 @@
       "+20 (010) 9876 5432"
     ],
     "emails": [
-      "info@threepyramids.com",
-      "sales@threepyramids.com"
+      "soliman@threeepyramids.com",
+      "soliman2@threeepyramids.com"
     ],
     "workHours": "Saturday - Thursday: 8:00 AM - 5:00 PM"
   },

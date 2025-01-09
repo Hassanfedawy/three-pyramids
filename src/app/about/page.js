@@ -43,45 +43,79 @@ export default function AboutPage() {
     <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-12 md:py-16 space-y-12 sm:space-y-16">
       {/* Hero Section */}
       <section className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 items-center">
-        <div>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-pyramid-700 mb-4 sm:mb-6 transition-all duration-500 ease-in-out transform hover:scale-105">
+        <div className="space-y-6">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-pyramid-800 
+                         leading-tight tracking-tight 
+                         transition-all duration-500 ease-in-out transform hover:scale-105">
             {t('about.heroTitle')}
           </h1>
-          <p className="text-lg sm:text-xl text-pyramid-500 mb-4 sm:mb-6">
+          <p className="text-xl sm:text-2xl text-pyramid-600 font-medium">
             {t('about.heroSubtitle')}
           </p>
-          <p className="text-sm sm:text-base text-pyramid-600">
+          <p className="text-base sm:text-lg text-pyramid-500 leading-relaxed">
             {t('about.heroDescription')}
           </p>
         </div>
-        <div>
+        <div className="grid grid-cols-2 gap-4 sm:gap-6">
           <img 
-            src="/construction-materials.jpg" 
-            alt="Three Pyramids" 
-            className="w-full rounded-pyramid shadow-pyramid-soft transition-all duration-500 ease-in-out transform hover:scale-105"
+            src="/Images/Logo.jpg" 
+            alt="Three Pyramids Logo" 
+            className="w-full h-48 sm:h-64 object-cover rounded-pyramid 
+                       shadow-pyramid-soft transition-all duration-500 
+                       ease-in-out transform hover:scale-105 col-span-2"
+          />
+          <img 
+            src="/Images/Hafar.jpg" 
+            alt="Heavy Equipment" 
+            className="w-full h-32 sm:h-48 object-cover rounded-pyramid 
+                       shadow-pyramid-soft transition-all duration-500 
+                       ease-in-out transform hover:scale-105"
+          />
+          <img 
+            src="/Images/Range rover.jpg" 
+            alt="Transport Vehicles" 
+            className="w-full h-32 sm:h-48 object-cover rounded-pyramid 
+                       shadow-pyramid-soft transition-all duration-500 
+                       ease-in-out transform hover:scale-105"
           />
         </div>
       </section>
 
       {/* Mission and Values */}
-      <section className="bg-pyramid-50 p-6 sm:p-8 md:p-12 rounded-pyramid">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-2xl sm:text-3xl font-bold text-pyramid-700 mb-4 sm:mb-6 transition-all duration-500 ease-in-out transform hover:scale-105">
+      <section className="bg-gradient-to-br from-pyramid-50 to-pyramid-100 
+                          p-8 sm:p-12 md:p-16 rounded-pyramid 
+                          relative overflow-hidden">
+        {/* Decorative Background Elements */}
+        <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+          <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-pyramid-200 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-1/4 left-1/4 w-48 h-48 bg-pyramid-300 rounded-full blur-3xl"></div>
+        </div>
+
+        <div className="max-w-5xl mx-auto text-center relative z-10">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-pyramid-800 
+                         mb-6 sm:mb-8 
+                         transition-all duration-500 ease-in-out transform hover:scale-105">
             {t('about.missionTitle')}
           </h2>
-          <p className="text-lg sm:text-xl text-pyramid-600 mb-4 sm:mb-6">
+          <p className="text-xl sm:text-2xl text-pyramid-600 mb-8 sm:mb-12 
+                        max-w-3xl mx-auto leading-relaxed">
             {t('about.missionStatement')}
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
             {['innovation', 'quality', 'sustainability'].map((value, index) => (
               <div 
                 key={index} 
-                className="bg-white p-4 sm:p-6 rounded-pyramid shadow-pyramid-soft transition-all duration-500 ease-in-out hover:shadow-pyramid-medium"
+                className="bg-white/80 backdrop-blur-sm p-6 sm:p-8 
+                           rounded-pyramid shadow-pyramid-soft 
+                           transition-all duration-500 ease-in-out 
+                           hover:shadow-pyramid-medium hover:-translate-y-2"
               >
-                <h3 className="text-xl sm:text-2xl font-semibold text-pyramid-600 mb-2 sm:mb-4">
+                <h3 className="text-2xl sm:text-3xl font-semibold text-pyramid-700 
+                               mb-4 sm:mb-6 
+                               transition-all duration-500 ease-in-out transform hover:scale-105">
                   {t(`about.values.${value}.title`)}
                 </h3>
-                <p className="text-sm sm:text-base text-pyramid-500">
+                <p className="text-base sm:text-lg text-pyramid-500">
                   {t(`about.values.${value}.description`)}
                 </p>
               </div>
@@ -91,19 +125,43 @@ export default function AboutPage() {
       </section>
 
       {/* Company Description */}
-      <section className="bg-white p-6 sm:p-8 md:p-12 rounded-pyramid">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl sm:text-3xl font-bold text-pyramid-700 text-center mb-4 sm:mb-8 transition-all duration-500 ease-in-out transform hover:scale-105">
+      <section className="bg-pyramid-50 p-8 sm:p-12 md:p-16 rounded-pyramid">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-pyramid-800 
+                         mb-6 sm:mb-8 
+                         transition-all duration-500 ease-in-out transform hover:scale-105">
             {t('about.milestonesTitle')}
           </h2>
-          <p className="text-lg sm:text-xl text-pyramid-600 text-center mb-4 sm:mb-8">
+          <p className="text-xl sm:text-2xl text-pyramid-600 mb-8 sm:mb-12 
+                        max-w-3xl mx-auto leading-relaxed">
             {t('about.companyDescription')}
           </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+            {[
+              "/Images/Hafar.jpg", 
+              "/Images/Range rover.jpg", 
+              "/Images/Mitsubishi.jpg", 
+              "/Images/na2l.jpg"
+            ].map((image, index) => (
+              <div 
+                key={index} 
+                className="overflow-hidden rounded-pyramid shadow-pyramid-soft 
+                           transition-all duration-500 ease-in-out 
+                           hover:shadow-pyramid-medium hover:scale-105"
+              >
+                <img 
+                  src={image} 
+                  alt={`Company Image ${index + 1}`} 
+                  className="w-full h-48 object-cover"
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* Company Milestones */}
-      <section className="bg-pyramid-50 p-6 sm:p-8 md:p-12 rounded-pyramid relative overflow-hidden">
+      <section className="bg-white p-8 sm:p-12 md:p-16 rounded-pyramid">
         <h2 className="text-2xl sm:text-3xl font-bold text-pyramid-700 text-center mb-8 sm:mb-12 transition-all duration-500 ease-in-out transform hover:scale-105">
           {t('about.milestonesTitle')}
         </h2>

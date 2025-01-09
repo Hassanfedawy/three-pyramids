@@ -43,9 +43,16 @@ export default function Navbar() {
           {/* Logo and Brand */}
           <Link href="/" className="flex items-center space-x-3">
             <img 
-              src="/pyramid-logo.png" 
+              src="/Images/Logo.jpg" 
               alt="Three Pyramids Logo" 
-              className="h-10 sm:h-12 w-auto"
+              className="h-16 sm:h-20 w-auto 
+                         transition-transform duration-300 
+                         hover:scale-105 
+                         hover:brightness-110 
+                         active:scale-95 
+                         rounded-lg 
+                         shadow-sm 
+                         hover:shadow-md"
             />
           </Link>
 
