@@ -1,6 +1,7 @@
 "use client"
 import { useTranslation } from 'react-i18next';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 
 export default function ServicesPage() {
@@ -112,10 +113,13 @@ export default function ServicesPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
               {service.images.map((image, imgIndex) => (
                 <div key={imgIndex} className="overflow-hidden rounded-pyramid">
-                  <img 
+                  <Image 
                     src={image} 
                     alt={`${service.title} - Image ${imgIndex + 1}`} 
-                    className="w-full h-48 sm:h-64 object-cover hover:scale-105 transition-transform"
+                    width={600}
+                    height={400}
+                    className="w-full h-48 sm:h-64 object-contain bg-white hover:scale-105 transition-transform"
+                    priority={index === 0 && imgIndex === 0}
                   />
                 </div>
               ))}
@@ -193,10 +197,13 @@ export default function ServicesPage() {
               className="bg-white p-6 sm:p-8 rounded-pyramid shadow-pyramid-soft"
             >
               <div className="mb-4 sm:mb-6">
-                <img 
+                <Image 
                   src={equipment.image} 
                   alt={equipment.name} 
-                  className="w-full h-48 object-cover rounded-pyramid"
+                  width={600}
+                  height={400}
+                  className="w-full h-48 object-contain bg-white rounded-pyramid"
+                  priority={index === 0}
                 />
               </div>
               <h3 className="text-xl sm:text-2xl font-bold text-pyramid-700 mb-3">

@@ -1,6 +1,7 @@
 "use client"
 import { useTranslation } from 'react-i18next';
 import { FaCheckCircle } from 'react-icons/fa';
+import Image from 'next/image';
 
 export default function AboutPage() {
   const { t } = useTranslation('common');
@@ -57,24 +58,31 @@ export default function AboutPage() {
           </p>
         </div>
         <div className="grid grid-cols-2 gap-4 sm:gap-6">
-          <img 
+          <Image 
             src="/Images/Logo.jpg" 
             alt="Three Pyramids Logo" 
-            className="w-full h-48 sm:h-64 object-cover rounded-pyramid 
+            width={800}
+            height={600}
+            className="w-full h-48 sm:h-64 object-contain bg-white rounded-pyramid 
                        shadow-pyramid-soft transition-all duration-500 
                        ease-in-out transform hover:scale-105 col-span-2"
+            priority
           />
-          <img 
+          <Image 
             src="/Images/Hafar.jpg" 
             alt="Heavy Equipment" 
-            className="w-full h-32 sm:h-48 object-cover rounded-pyramid 
+            width={400}
+            height={300}
+            className="w-full h-32 sm:h-48 object-contain bg-white rounded-pyramid 
                        shadow-pyramid-soft transition-all duration-500 
                        ease-in-out transform hover:scale-105"
           />
-          <img 
+          <Image 
             src="/Images/Range rover.jpg" 
             alt="Transport Vehicles" 
-            className="w-full h-32 sm:h-48 object-cover rounded-pyramid 
+            width={400}
+            height={300}
+            className="w-full h-32 sm:h-48 object-contain bg-white rounded-pyramid 
                        shadow-pyramid-soft transition-all duration-500 
                        ease-in-out transform hover:scale-105"
           />
@@ -104,7 +112,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
             {['innovation', 'quality', 'sustainability'].map((value, index) => (
               <div 
-                key={index} 
+                key={index}
                 className="bg-white/80 backdrop-blur-sm p-6 sm:p-8 
                            rounded-pyramid shadow-pyramid-soft 
                            transition-all duration-500 ease-in-out 
@@ -149,10 +157,13 @@ export default function AboutPage() {
                            transition-all duration-500 ease-in-out 
                            hover:shadow-pyramid-medium hover:scale-105"
               >
-                <img 
+                <Image 
                   src={image} 
                   alt={`Company Image ${index + 1}`} 
-                  className="w-full h-48 object-cover"
+                  width={400}
+                  height={300}
+                  className="w-full h-48 object-contain bg-white"
+                  priority={index === 0}
                 />
               </div>
             ))}

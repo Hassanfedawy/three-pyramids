@@ -68,6 +68,20 @@ export default function ContactPage() {
           
           <div className="space-y-4 text-pyramid-600">           
             <div>
+              <h3 className="font-semibold">Address</h3>
+              <p>{t('contact.address')}</p>
+            </div>
+            <div>
+              <h3 className="font-semibold">Phone</h3>
+              {t('contact.phones', { returnObjects: true }).map((phone, index) => (
+                <p key={index}>{phone}</p>
+              ))}
+            </div>
+            <div>
+              <h3 className="font-semibold">Fax</h3>
+              <p>{t('contact.fax')}</p>
+            </div>
+            <div>
               <h3 className="font-semibold">Email</h3>
               {t('contact.emails', { returnObjects: true }).map((email, index) => (
                 <p key={index}>{email}</p>

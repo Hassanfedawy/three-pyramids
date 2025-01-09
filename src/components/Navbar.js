@@ -21,7 +21,7 @@ export default function Navbar() {
   useEffect(() => {
     const savedLanguage = localStorage.getItem('language') || 
                           (navigator.language.startsWith('ar') ? 'ar' : 'en');
-    
+
     if (savedLanguage !== i18n.language) {
       i18n.changeLanguage(savedLanguage);
       document.documentElement.dir = savedLanguage === 'ar' ? 'rtl' : 'ltr';
@@ -39,9 +39,9 @@ export default function Navbar() {
   return (
     <nav className="bg-white shadow-pyramid-soft sticky top-0 z-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4 lg:py-5">
+        <div className={`flex justify-between items-center py-4 lg:py-5 ${i18n.language === 'ar' ? 'flex-row-reverse' : ''}`}>
           {/* Logo and Brand */}
-          <Link href="/" className="flex items-center space-x-3">
+          <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
             <img 
               src="/Images/Logo.jpg" 
               alt="Three Pyramids Logo" 
@@ -80,7 +80,7 @@ export default function Navbar() {
           </div>
 
           {/* Navigation Links (Desktop) */}
-          <div className="hidden md:flex space-x-6 lg:space-x-8">
+          <div className={`hidden md:flex ${i18n.language === 'ar' ? 'space-x-reverse' : 'space-x-6'} lg:space-x-8`}>
             {navItems.map((item) => (
               <Link
                 key={item.href}
@@ -88,7 +88,7 @@ export default function Navbar() {
                 className="text-pyramid-500 hover:text-pyramid-300 
                            transition-colors font-medium font-roboto
                            text-base lg:text-lg tracking-wide
-                           relative group"
+                           relative group mx-5"
               >
                 {item.label}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-pyramid-300 
@@ -99,7 +99,7 @@ export default function Navbar() {
           </div>
 
           {/* Language Switcher and CTA (Desktop) */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden md:flex items-center space-x-4 rtl:space-x-reverse">
             <div className="flex items-center bg-pyramid-100 rounded-full p-1">
               <button 
                 onClick={() => changeLanguage('en')}
@@ -140,7 +140,7 @@ export default function Navbar() {
                     {item.label}
                   </Link>
                 ))}
-                <div className="flex justify-center space-x-4 pt-4">
+                <div className="flex justify-center space-x-4 rtl:space-x-reverse pt-4">
                   <button 
                     onClick={() => changeLanguage('en')}
                     className={`px-3 py-1 rounded-full font-roboto font-medium text-sm

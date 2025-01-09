@@ -1,24 +1,122 @@
 {
   "landing": {
-    "title": "Three Pyramids Construction Materials & Transport",
-    "subtitle": "Comprehensive Construction Solutions",
-    "description": "Providing high-quality construction materials, transportation services, and specialized heavy-duty equipment for your project needs.",
-    "cta": "Get a Quote",
+    "heroTitle": "Three Pyramids: Engineering Excellence",
+    "heroSubtitle": "Transforming Visions into Remarkable Realities",
+    "heroDescription": "With decades of expertise, we deliver comprehensive engineering solutions that drive innovation and success.",
+    
     "serviceHighlights": [
       {
-        "title": "Transportation Solutions",
-        "description": "Efficient and reliable transportation of construction materials and heavy equipment across diverse terrains."
+        "title": "Transportation Services",
+        "description": "Efficient logistics and transportation solutions tailored to your project needs."
       },
       {
-        "title": "Construction Support",
-        "description": "Professional construction support with state-of-the-art machinery and skilled workforce."
+        "title": "Construction Management",
+        "description": "Expert project management ensuring timely and high-quality project delivery."
       },
       {
         "title": "Equipment Rental",
-        "description": "Wide range of high-quality construction and transport equipment available for rent."
+        "description": "State-of-the-art equipment rental for diverse industrial and construction requirements."
       }
-    ]
-  },  
+    ],
+    
+    "featuresSection": {
+      "title": "Why Choose Three Pyramids",
+      "description": "Our commitment to excellence sets us apart in the engineering landscape."
+    },
+    
+    "features": [
+      {
+        "title": "Quality Assurance",
+        "description": "Rigorous quality control processes ensuring top-tier project outcomes."
+      },
+      {
+        "title": "Global Reach",
+        "description": "International expertise with a local understanding of project dynamics."
+      },
+      {
+        "title": "Strategic Partnerships",
+        "description": "Collaborative approach with industry leaders and innovative partners."
+      }
+    ],
+    
+    "servicesSection": {
+      "title": "Our Comprehensive Services",
+      "description": "Tailored solutions for diverse engineering and construction needs."
+    },
+    
+    "services": [
+      {
+        "title": "Heavy Equipment Rental",
+        "description": "Cutting-edge machinery for construction, mining, and industrial projects.",
+        "icon": "equipment"
+      },
+      {
+        "title": "Transportation Logistics",
+        "description": "Efficient material and equipment transportation across various terrains.",
+        "icon": "transport"
+      },
+      {
+        "title": "Construction Management",
+        "description": "End-to-end project management with expert coordination and oversight.",
+        "icon": "management"
+      },
+      {
+        "title": "Engineering Consultation",
+        "description": "Strategic insights and technical expertise for complex projects.",
+        "icon": "consultation"
+      }
+    ],
+    
+    "projectTypesSection": {
+      "title": "Our Project Spectrum",
+      "description": "Diverse project capabilities across multiple industrial domains."
+    },
+    
+    "projectTypes": [
+      {
+        "title": "Infrastructure Development",
+        "description": "Comprehensive solutions for urban and rural infrastructure projects."
+      },
+      {
+        "title": "Industrial Facilities",
+        "description": "Advanced engineering for complex industrial and manufacturing facilities."
+      },
+      {
+        "title": "Large-Scale Construction",
+        "description": "Expertise in managing extensive and complex construction projects."
+      }
+    ],
+    
+    "strengthsSection": {
+      "title": "Our Core Strengths",
+      "description": "The foundational pillars of our success and commitment."
+    },
+    
+    "strengths": [
+      {
+        "title": "Expert Team",
+        "description": "Highly skilled professionals with diverse engineering backgrounds."
+      },
+      {
+        "title": "Continuous Growth",
+        "description": "Constant innovation and adaptation to emerging industry trends."
+      },
+      {
+        "title": "Sustainability Focus",
+        "description": "Environmentally responsible solutions that minimize ecological impact."
+      },
+      {
+        "title": "Certified Excellence",
+        "description": "International certifications validating our commitment to quality."
+      }
+    ],
+    
+    "ctaSection": {
+      "title": "Ready to Transform Your Vision?",
+      "description": "Let's discuss how Three Pyramids can elevate your next project with our comprehensive engineering solutions.",
+      "button": "Contact Us Today"
+    }
+  },
   "about": {
     "heroTitle": "Three Pyramids: Engineering Excellence",
     "heroSubtitle": "Leaders in Heavy Equipment and Transportation Solutions",
@@ -159,16 +257,17 @@
   },
   "contact": {
     "title": "Contact Three Pyramids",
-    "address": "123 Industrial Zone, Cairo, Egypt",
+    "address": "Alexandria, El Mandara, Zohour City, Building 2",
     "phones": [
-      "+20 (02) 1234 5678",
-      "+20 (010) 9876 5432"
+      "+2 01227699956",
+      "+2 01044900069",
+      "+2 01044842458"
     ],
+    "fax": "0452929995",
     "emails": [
-      "soliman@threeepyramids.com",
-      "soliman2@threeepyramids.com"
-    ],
-    "workHours": "Saturday - Thursday: 8:00 AM - 5:00 PM"
+      "soliman@threepyramids.com",
+      "soliman2@threepyramids.com"
+    ]
   },
   "navbar": {
     "brand": "Three Pyramids",
